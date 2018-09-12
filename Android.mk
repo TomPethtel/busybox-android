@@ -358,9 +358,5 @@ BUSYBOX_LOCAL_BINARY := $(LOCAL_PATH)/busybox-android
 $(BUSYBOX_BINARY): toolbox
 	@cp $(BUSYBOX_LOCAL_BINARY) $(BUSYBOX_BINARY)
 	@echo "Installing busybox"
-	@for tool in $(BUSYBOX_TOOLS) ; do \
-		rm -rf $(BUSYBOX_INSTALL_DIR)/$$tool ; \
-		ln -s busybox $(BUSYBOX_INSTALL_DIR)/$$tool ; \
-	done
 
 ALL_DEFAULT_INSTALLED_MODULES += $(BUSYBOX_BINARY)
